@@ -1,0 +1,22 @@
+Partie A — Navigation et manipulation
+Afficher le répertoire courant : pwd
+
+Créer l'arborescence : mkdir -p listes-electorales-martinique/{data/{nord,sud,centre},scripts,rapports}
+
+Créer les fichiers : cd data/nord && touch grand-riviere.txt trinite.txt marigot.txt
+
+Ajouter du texte : echo "Villes du Nord de la Martinique" > nom_du_fichier.txt
+
+Afficher avec un pipe : cat *.txt | more
+
+Partie B — Recherche et filtrage
+Créer le fichier : nano data/listes.csv
+
+Afficher uniquement Fort-de-France : grep "Fort-de-France" data/listes.csv
+
+Compter les listes : grep "Fort-de-France" data/listes.csv | wc -l
+
+Trier par nom : sort -t ',' -k 4 data/listes.csv
+
+Extraire la colonne commune : cut -d ',' -f 1 data/listes.csv
+(Note : L'énoncé suggère -f 2, mais la commune est en colonne 1 dans ton fichier).
